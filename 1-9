@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner stdIn = new Scanner(System.in);
+        int a = stdIn.nextInt();
+        int b = stdIn.nextInt();
+        sumof(a, b);
+    }
+    
+    public static int sumof(int a, int b) {
+        int min;
+        int max;
+        if (a > b) {
+            min = b;
+        }else {
+            min = a;
+        }
+        
+        if (a > b) {
+            max = a;
+        }else {
+            max = b;
+        }
+        int sum = 0;
+        for (int i = min; i <= max; i++) {
+            sum += i;
+        }
+        System.out.println(min+"から"+max+"までの合計は"+sum);
+        return sum;
+    }
+}
